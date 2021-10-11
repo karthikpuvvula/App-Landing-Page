@@ -1,91 +1,135 @@
-@media (max-width:1024px) {
+@media (max-width:1030px) {
 
-    /* About Section */
+    /* Features Section */
 
 
 }
 
 @media (max-width: 991px) {
 
-    /* Custom Classes */
-    .text-content {
-        width: 100%;
+    /* Common CSS */
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+    .ipad-px-30 {
+        padding: 0 1.875rem;
     }
 
-    /* Navbar Brand */
-    .navigation-wrap {
+    /* Header Section */
+    .navbar {
+        padding-top: 0.625rem;
+        padding-bottom: 0.75rem;
+    }
+    .navbar-brand {
+        width: 50%;
+    }
+    .navbar-brand img {
+        max-width: 60%;
+    }
+    .navbar-toggler {
+        padding-right: 0;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .navbar-toggler-icon {
+        color: var(--text-white);
+        width: 1em;
+        height: 1em;
+    }
+    .navbar-sticky-on .navbar-toggler-icon {
+        color: var(--text-black);
+    }
+    .navbar .navbar-nav {
+        background-color: var(--bg-white);
+        border-radius: 0.188rem;
         text-align: center;
-        background-color: var(--white-color);
     }
-    .navigation-wrap .navbar-brand img {
-        height: 3.8125rem;
-    }
-    .navigation-wrap .nav-link {
-        line-height: 1.8725rem;
+    .navbar .navbar-nav .nav-link {
+        padding: 0.625rem 1.5rem;
+        color: var(--text-light-gray);
     }
 
-    /* Banner Design */
-    .top-banner {
-        padding: 9.375rem 0 9.375rem;
+
+
+    /* Home Section */
+    
+    #home {
+        padding-top: 7rem;
+    }
+    #home .row {
+        flex-direction: column-reverse;
+    }
+    #home .home-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    #home .home-download-btn {
+        justify-content: center;
+    }
+    .home-image {
+        text-align: center;
+    }
+    .home-image img {
+        max-width: 60%;
     }
 
-    /* Carousel Design */
-    .testimonial-section .carousel-item .carousel-caption p {
-        padding: 0;
-    }
+
+    /* Pricing Section */
+    
     
 }
 
 @media (max-width: 767px) {
 
-    /* Custom CSS */
-    h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-       font-size: 2rem;
-       line-height: 2.0625rem;
+    /* Common CSS */
+    .mobile-px-20 {
+        padding: 0 1.25rem;
     }
 
-    /* Top Banner */
-    .top-banner {
-        padding: 10.875rem 0 9.375rem;
+
+    /* Home Section */
+    #home {
+        padding-top: 5rem;
+    }
+    #home .home-text h2 {
+        font-size: 2.438rem;
+        line-height: 3.938rem;
+    }
+    #home .home-download-btn .btn {
+        margin: 0;
+    }
+    .home-image {
+        text-align: center;
+        transform: rotate(0deg);
     }
 
-    /* Story Section */
-    .story-section {
-        height: auto;
-        padding: 3rem 0;
+
+    /* Counter Section */
+    .single-counter:nth-child(2)::after {
+        display: none;
     }
 
-    /* Carousel Design */
-    .testimonial-section .carousel-item {
-        padding: 11rem 3.125rem;
-    }
-    
-    /* Newsletter */
 
-    .newsletter-form {
-        width: 75%;
+    /* Features Section */
+    .margin-top-up {
+        margin-top: 0rem;
     }
-    .newsletter-form .main-btn {
-        width: 100%;
-        margin-top: 1rem;
+    .features-middle {
+        text-align: center;
     }
-
-    /* Footer Link */
-    .footer .footer-link,
-    .footer a i {
-        padding: 0 0.7rem;
+    .feature-img {
+        text-align: center;
+        padding-top: 1.5rem;
+    }
+    .feature-img img {
+        max-width: 95%;
     }
     
 }
 
 @media (max-width: 330px) {
 
-    /* Carousel Design */
-    .testimonial-section .carousel-item {
-        padding: 13rem 3.125rem;
-    }
+  
 
 }

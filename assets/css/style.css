@@ -266,6 +266,13 @@ img {
     padding: 1.063rem 0;
 }
 
+#home .home-download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
 #home .home-download-btn .btn {
     padding: 1.5rem 3rem;
     margin-left: 1.5rem;
@@ -273,7 +280,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 #home .home-download-btn .btn:first-child {
@@ -289,7 +296,7 @@ img {
     transition: all .5s ease-out;
 }
 
-#home .home-download-btn span {
+#home .home-download-btn i {
     font-size: 1.688rem;
     margin-right: 0.625rem;
 }
@@ -314,19 +321,223 @@ img {
 
 
 
+/************** Counter Section ***********/
+
+.counter-area {
+    padding: 6.875rem 0 1.875rem;
+}
+
+.single-counter {
+    position: relative;
+}
+
+.single-counter span {
+    font-size: 3rem;
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.single-counter::after {
+    position: absolute;
+    content: '';
+    height: 70%;
+    width: 0.063rem;
+    background-color: var(--bg-black);
+    top: 0;
+    right: 0;
+    transform: translate(-50%);
+    opacity: 0.15;
+}
+
+.single-counter:last-child::after {
+    display: none;
+}
+
+
+
+
 /************** Promo Section ***********/
 
+.promo-section {
+    padding: 6.25rem 0 4rem;
+}
+
+.section-heading {
+    margin-bottom: 2.813rem;
+}
+
+.section-heading > h2 {
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.section-heading > h2::after {
+    position: absolute;
+    content: "";
+    height: 0.125rem;
+    width: 4.563rem;
+    background: var(--bg-light-pink);
+    bottom: 1.125rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.section-heading h2 span {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.single-promo-hover {
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    will-change: transform;
+}
+
+.single-promo-1 {
+    box-shadow: 0 3px 20px 0px rgb(0 0 0 / 12%);
+    border-radius: 1.5rem;
+    padding: 1.875rem 2.5rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+
+.single-promo-1:before {
+    position: absolute;
+    content: '';
+    width: 0.063rem;
+    height: 0.125rem;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.single-promo-1:hover::before {
+    width: 100%;
+    background: var(--bg-gradient);
+}
+
+.single-promo-hover:hover {
+    box-shadow: 0 2rem 5rem rgb(0 0 0 / 12%);
+}
+
+.single-promo-1 span {
+    font-size: 30px;
+    background-image: url(../images/promo-icon-bg.png);
+    padding: 54px 0 57px 0;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.single-promo-1 h5 {
+    padding-bottom: 0.438rem;
+}
+
+.single-promo-1 p {
+    padding-top: 0.625rem;
+    font-size: 0.938rem;
+}
 
 
 
 
-/************** Counter Section ***********/
+/************** Features Section ***********/
+
+#features .title {
+    height: 800px;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 100px;
+    background: url(../images/feature-bg.png) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+#features .title h2 {
+    margin-bottom: 0.813rem;
+}
+
+.features-middle h2,
+.features-middle p {
+    color: var(--text-white);
+}
+
+.feature-img {
+    text-align: right;
+}
+
+.feature-img img {
+    max-width: 60%;
+}
+
+.margin-top-up {
+    margin-top: -30rem;
+}
+
+.single-feature {
+    background: var(--bg-white);
+    margin-top: 1.875rem;
+    padding: 2.5rem 2.5rem 2.438rem 3.125rem;
+    position: relative;
+    border-radius: 1.563rem;
+    -webkit-box-shadow: 0 0.938rem 2.5rem 0 rgb(0 0 0 / 8%);
+    box-shadow: 0 0.938rem 2.5rem 0 rgb(0 0 0 / 8%);
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 3px;
+    color: var(--text-white);
+    font-size: 23px;
+    border-bottom-left-radius: 25px;
+    background: var(--bg-gradient);
+}
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+}
+
+.svg-inline--fa.fa-w-12 {
+    width: 0.75rem;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+.single-feature:hover {
+    color: var(--text-white);
+    background: var(--bg-gradient);
+}
 
 
 
-
-
-/************** Counter Section ***********/
 
 
 
