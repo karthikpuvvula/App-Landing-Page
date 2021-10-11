@@ -76,7 +76,9 @@
 
 
     /* Pricing Section */
-    
+    .single-price {
+        margin-bottom: 2.5rem;
+    }
     
 }
 
