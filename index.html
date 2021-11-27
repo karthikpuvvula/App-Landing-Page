@@ -28,7 +28,57 @@
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarText" data-bs-offset="0" class="navbar-nav" tabindex="0">
+<body onload="hidePreloader();" data-bs-spy="scroll" data-bs-target="#navbarText" data-bs-offset="0" class="navbar-nav" tabindex="0">
+
+<!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
+
+<!-- Your Chat Plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<!-- Facebook chat messenger plugin -->
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "105378961983244");
+  chatbox.setAttribute("attribution", "biz_inbox");
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v12.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/te_IN/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<!-- Pre Loader -->
+
+<div id='preloader' class="preloader">
+    <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+      <path fill="#e74c3c" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+        <animateTransform 
+          attributeName="transform" 
+          attributeType="XML" 
+          type="rotate"
+          dur="1s" 
+          from="0 50 50"
+          to="360 50 50" 
+          repeatCount="indefinite" />
+      </path>
+    </svg>
+</div>
+
+
 
 <!----------- Header Section------------------------->
 
@@ -560,18 +610,28 @@
   </div>
 </section>
 
-<!----------- 7. Book Food ------------------->
-
-
-
 <!----------- 9. Footer ---------------------->
 
-
+<footer>
+  <div class="p-3 copyright">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 p-3 text-center text-lg-start mob-pb-0">
+          <p class="my-0">Copyright @ 2021 <a href="#">ONESHOT</a> All Rights Reserved.</p>
+        </div>
+        <div class="col-12 col-lg-6 p-3 text-center text-lg-end mob-pb-0">
+          <p>Designed by <a href="#">CODEFOREDUCATION</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <!----------- Scroll Top Icon ------------------>
 
-
-
+<div id="scrollUp" title="Scroll To Top">
+  <a href="#home"><span class="ti-arrow-up fs-4 text-white"></span></a>
+</div>
 
 <!----------- Bootstrap JS ---------------->
 

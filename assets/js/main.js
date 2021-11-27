@@ -15,10 +15,10 @@ function navMenu() {
       // Apply Transition 
       if (scroll >= 250) {
          navBar.classList.add('navbar-sticky-transitioned');
-         // scrollTopButton.classList.add('scrollActive');
+         scrollTopButton.classList.add('scrollActive');
       } else {
          navBar.classList.remove('navbar-sticky-transitioned');
-         // scrollTopButton.classList.remove('scrollActive');
+         scrollTopButton.classList.remove('scrollActive');
       }
 
       // Sticky on 
@@ -84,3 +84,21 @@ var swiper = new Swiper('.swiper-container', {
 
 
 // Side Navigation bar close while we click on navigation links
+
+let navBar = document.querySelectorAll('.nav-link');
+let navCollapse = document.querySelector('.navbar-collapse.collapse');
+
+navBar.forEach(function(a) {
+   a.addEventListener("click", function() {
+      navCollapse.classList.remove("show");
+   });
+});
+
+
+// Preloader section:
+
+function hidePreloader() {
+   var preloader = document.getElementById('preloader');
+   preloader.style.display = "none";
+}
+
